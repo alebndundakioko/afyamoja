@@ -1,10 +1,27 @@
+# ESLint configuration files
 !**/.eslintrc*
-node_modules*
-dist
+
+# Node.js modules
+node_modules/
+
+# Build output directories
+dist/
+
+# SVG and ICO files
 *.svg
 *.ico
+
+# JSON files (if you want to ignore all JSON files, otherwise remove this line)
 *.json
+
+# Git ignore file
 .gitignore
+
+# Markdown files
 *.md
+
+# Log files
 *.log
+
+# Lock files (package-lock, yarn.lock, etc.)
 *.lock

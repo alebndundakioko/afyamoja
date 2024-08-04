@@ -1,7 +1,15 @@
-node_modules
+# Node.js modules
+node_modules/
+
+# macOS system files
 .DS_Store
-dist
-dist-ssr
+
+# Build output directories
+dist/
+dist-ssr/
+
+# Local environment files
 *.local
-/node_modules
+
+# Zip archives
 *.zip
