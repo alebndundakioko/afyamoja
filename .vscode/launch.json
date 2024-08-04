@@ -1,0 +1,16 @@
+{
+    // IntelliSense helps me learn about possible attributes.
+    // I can hover over attributes to see their descriptions.
+    // For more details, I can visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

@@ -53,10 +53,10 @@ axiosInstance.interceptors.response.use(
     );
     // if needs to navigate to login page when request exception
     // history.replace('/login');
-    let errorMessage = '系统异常';
+    let errorMessage = 'System error';
 
     if (error?.message?.includes('Network Error')) {
-      errorMessage = '网络错误，请检查您的网络';
+      errorMessage = 'Network error, please check your connection';
     } else {
       errorMessage = error?.message;
     }
@@ -81,10 +81,10 @@ export type Response<T = any> = {
 export type MyResponse<T = any> = Promise<Response<T>>;
 
 /**
- *
- * @param method - request methods
- * @param url - request url
- * @param data - request data or params
+ * 
+ * @param method - HTTP request method
+ * @param url - URL for the request
+ * @param data - Data or parameters for the request
  */
 export const request = <T = any>(
   method: Lowercase<Method>,

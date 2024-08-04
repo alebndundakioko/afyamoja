@@ -1,0 +1,153 @@
+/* DocumentationPage.css */
+.documentation-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #084d72 50%, #08545e 50%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.introduction-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.intro-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.key-features {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: calc(50% - 20px);
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.sections-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.section-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    margin-bottom: 24px;
+}
+
+.section-card-image {
+    position: relative;
+    width: 100%;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.section-title {
+    margin: 16px 0;
+    padding: 0 16px;
+}
+
+.section-paragraph {
+    padding: 16px;
+}
+
+.footer {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.footer a {
+    color: #0aada0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .introduction-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sections-container {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        width: calc(100% - 20px);
+    }
+}

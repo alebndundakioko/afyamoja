@@ -27,7 +27,7 @@ const App: React.FC = () => {
     );
   };
 
-  /** initial theme */
+
   useEffect(() => {
     setTheme(theme === 'dark');
 
@@ -43,8 +43,7 @@ const App: React.FC = () => {
     }
   }, []);
 
-  // set the locale for the user
-  // more languages options can be added here
+  
   useEffect(() => {
     if (locale === 'en_US') {
       dayjs.locale('en');
@@ -53,11 +52,7 @@ const App: React.FC = () => {
     }
   }, [locale]);
 
-  /**
-   * handler function that passes locale
-   * information to ConfigProvider for
-   * setting language across text components
-   */
+  
   const getAntdLocale = () => {
     if (locale === 'en_US') {
       return enUS;

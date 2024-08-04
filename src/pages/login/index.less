@@ -2,16 +2,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f0f2f5;
-  &-form {
-    width: 300px;
-    padding: 50px 40px 10px;
-    border-radius: 10px;
-    h2 {
-      text-align: center;
-    }
-    &_button {
-      width: 100%;
-    }
-  }
+  height: 100vh; /* Ensure the container covers the full viewport height */
+  width: 100vw; /* Ensure the container covers the full viewport width */
+  background: linear-gradient(to right, #4e5259, #19d4ed); /* Gradient background */
+}
+
+.login-page-form {
+  width: 300px;
+  padding: 50px 40px 10px;
+  border-radius: 10px;
+  background: rgba(33, 228, 121, 0.8); /* Optional: Adding a semi-transparent background for the form */
+}
+
+.login-page-form h2 {
+  text-align: center;
+}
+
+.login-page-form .ant-btn {
+  width: 100%;
 }

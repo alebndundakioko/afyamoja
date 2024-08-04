@@ -5,7 +5,7 @@ import { intercepter, mock } from '../config';
 const roles: Role[] = [
   {
     name: {
-      zh_CN: '访客',
+      zh_CN: 'Mtumizi',
       en_US: 'Guest',
     },
     code: 'role_guest',
@@ -14,7 +14,7 @@ const roles: Role[] = [
   },
   {
     name: {
-      zh_CN: '管理员',
+      zh_CN: 'Mkubwa',
       en_US: 'Admin',
     },
     code: 'role_admin',

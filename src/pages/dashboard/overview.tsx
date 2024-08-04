@@ -105,9 +105,9 @@ const Overview: FC<{ loading: boolean }> = ({ loading }) => {
       <ColCard
         loading={loading}
         metaName={formatMessage({ id: 'app.dashboard.overview.totalSales' })}
-        metaCount="¥ 126,560"
+        metaCount="26,560"
         body={<Trend wow="12%" dod="12%" />}
-        footer={<Field name={formatMessage({ id: 'app.dashboard.overview.dailySales' })} number="￥12,423" />}
+        footer={<Field name={formatMessage({ id: 'app.dashboard.overview.dailySales' })} number="2,340" />}
       />
       <ColCard
         loading={loading}
@@ -122,7 +122,7 @@ const Overview: FC<{ loading: boolean }> = ({ loading }) => {
             </AreaChart>
           </ResponsiveContainer>
         }
-        footer={<Field name={formatMessage({ id: 'app.dashboard.overview.dailySales' })} number="1234" />}
+        footer={<Field name={formatMessage({ id: 'app.dashboard.overview.dailySales' })} number="2184" />}
       />
       <ColCard
         loading={loading}

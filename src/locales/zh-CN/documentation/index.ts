@@ -1,20 +1,14 @@
 export const zhCN_documentation = {
-  'app.documentation.introduction.title': '介绍',
+  'app.documentation.introduction.title': 'Kuhusu Afya Moja',
   'app.documentation.introduction.description': `
-    react-antd-admin是一个基于react和ant-design开发的企业级中后台管理系统模板。
-    使用了最新的React Hooks API代替了传统的class API，
-    并且使用了typescript来规范代码的可读性和维护性，增强开发效率，
-    使用redux作为全局的状态管理库。
-    此项目可以你的新项目模板快速开发，根据自己的需求删除掉部分代码。如果你没有使用模板的需求，
-    此项目也会是一个学习react和typescript的好的资料。
-    此外，如果你觉得此项目有值得优化或修改的地方，也欢迎提出，我的联系方式将会显示在文章底部。
+   Afya Moja inawapa wataalamu wa afya zana zenye nguvu, ikiwa ni pamoja na mashauriano ya mtandaoni yaliyo salama, usimamizi wa kina wa wagonjwa, na dashibodi za utendaji zinazotoa maelezo muhimu. Kwa kuunganisha rekodi za wagonjwa, kuwezesha mawasiliano yasiyo na pingamizi, na kutoa maarifa yanayopangwa kwa data, Afya Moja inawawezesha wataalamu wa afya kutoa huduma bora, kuboresha mikondo yao ya kazi, na kusimamia matokeo ya wagonjwa kwa ufanisi. Kubali Afya Moja kubadilisha mazoea yako ya afya, kuhakikisha utoaji bora wa huduma na afya bora kwa jamii yako.
   `,
-  'app.documentation.catalogue.title': '目录',
-  'app.documentation.catalogue.description': '点击目录到达指定内容',
-  'app.documentation.catalogue.list.layout': '布局',
-  'app.documentation.catalogue.list.routes': '路由',
-  'app.documentation.catalogue.list.request': '网络请求',
-  'app.documentation.catalogue.list.theme': '主题',
-  'app.documentation.catalogue.list.typescript': 'Typescript',
-  'app.documentation.catalogue.list.international': '国际化',
+  'app.documentation.catalogue.title': 'Vipengele Muhimu',
+  'app.documentation.catalogue.description': 'Afya Moja imesanifiwa kwa vipengele vya kipekee vilivyoundwa kuboresha utoaji na usimamizi wa huduma za afya. Hapa chini ni vipengele muhimu vinavyofanya jukwaa letu kuwa muhimu kwa wataalamu wa afya:',
+  'app.documentation.catalogue.list.layout': 'Dashibodi ya uchambuzi wa kina',
+  'app.documentation.catalogue.list.routes': 'Rekodi za Wagonjwa Kamili',
+  'app.documentation.catalogue.list.request': 'Mawasiliano yasiyo na Pingamizi',
+  'app.documentation.catalogue.list.theme': 'Mipangilio ya Mashauriano ya Mtandaoni',
+  'app.documentation.catalogue.list.typescript': 'Zana za TeleHealth',
+  'app.documentation.catalogue.list.international': 'Mifumo ya Kampeni za Magonjwa',
 };

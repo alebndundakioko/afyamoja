@@ -20,11 +20,11 @@ const GuidePage: FC = () => {
           <Button
             type="link"
             className="driverjs-link"
-            href="https://github.com/kamranahmedse/driver.js"
+            href="https://www.instagram.com/mr_kioko/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            driver.js
+          Copyright by @ Caleb Ndunda
           </Button>
           .
         </Typography>

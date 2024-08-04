@@ -3,65 +3,22 @@ import type { MenuList } from '@/interface/layout/menu.interface';
 import { intercepter, mock } from '../config';
 
 const mockMenuList: MenuList = [
+ 
   {
     code: 'dashboard',
     label: {
-      zh_CN: '首页',
-      en_US: 'Dashboard',
+      zh_CN: 'Dashbodi ya namba',
+      en_US: 'Analytics Dashboard',
     },
-    icon: 'dashboard',
+    icon: 'Kuhusu saiti',
     path: '/dashboard',
   },
-  {
-    code: 'documentation',
-    label: {
-      zh_CN: '文档',
-      en_US: 'Documentation',
-    },
-    icon: 'documentation',
-    path: '/documentation',
-  },
-  {
-    code: 'guide',
-    label: {
-      zh_CN: '引导',
-      en_US: 'Guide',
-    },
-    icon: 'guide',
-    path: '/guide',
-  },
-  {
-    code: 'permission',
-    label: {
-      zh_CN: '权限',
-      en_US: 'Permission',
-    },
-    icon: 'permission',
-    path: '/permission',
-    children: [
-      {
-        code: 'routePermission',
-        label: {
-          zh_CN: '路由权限',
-          en_US: 'Route Permission',
-        },
-        path: '/permission/route',
-      },
-      {
-        code: 'notFound',
-        label: {
-          zh_CN: '404',
-          en_US: '404',
-        },
-        path: '/permission/404',
-      },
-    ],
-  },
+  
   {
     code: 'component',
     label: {
-      zh_CN: '组件',
-      en_US: 'Component',
+      zh_CN: 'Peji ya wagonjwa',
+      en_US: 'Patients page',
     },
     icon: 'permission',
     path: '/component',
@@ -69,59 +26,52 @@ const mockMenuList: MenuList = [
       {
         code: 'componentForm',
         label: {
-          zh_CN: '表单',
-          en_US: 'Form',
+          zh_CN: 'Ongeza mgonjwa',
+          en_US: 'Add patient',
         },
         path: '/component/form',
       },
       {
         code: 'componentTable',
         label: {
-          zh_CN: '表格',
-          en_US: 'Table',
+          zh_CN: 'Rekodi',
+          en_US: 'Patient records',
         },
         path: '/component/table',
       },
       {
         code: 'componentSearch',
         label: {
-          zh_CN: '查询',
-          en_US: 'Search',
+          zh_CN: 'Tafuta mgonjwa',
+          en_US: 'Find patients',
         },
         path: '/component/search',
       },
       {
         code: 'componentAside',
         label: {
-          zh_CN: '侧边栏',
-          en_US: 'Aside',
+          zh_CN: 'Hifadhi saa',
+          en_US: 'Book appointment',
         },
         path: '/component/aside',
       },
       {
         code: 'componentTabs',
         label: {
-          zh_CN: '选项卡',
-          en_US: 'Tabs',
+          zh_CN: 'Teuzi zijazo',
+          en_US: 'View appointments',
         },
         path: '/component/tabs',
       },
-      {
-        code: 'componentRadioCards',
-        label: {
-          zh_CN: '单选卡片',
-          en_US: 'Radio Cards',
-        },
-        path: '/component/radio-cards',
-      },
+      
     ],
   },
 
   {
     code: 'business',
     label: {
-      zh_CN: '业务',
-      en_US: 'Business',
+      zh_CN: 'Aktiviti zangu',
+      en_US: 'My activities',
     },
     icon: 'permission',
     path: '/business',
@@ -129,44 +79,84 @@ const mockMenuList: MenuList = [
       {
         code: 'basic',
         label: {
-          zh_CN: '基本',
-          en_US: 'Basic',
+          zh_CN: 'Maktaba ya posti',
+          en_US: 'Content Library',
         },
         path: '/business/basic',
       },
       {
         code: 'withSearch',
         label: {
-          zh_CN: '带查询',
-          en_US: 'WithSearch',
+          zh_CN: 'Ongeza posti',
+          en_US: 'Upload content',
         },
         path: '/business/with-search',
       },
       {
         code: 'withAside',
         label: {
-          zh_CN: '带侧边栏',
-          en_US: 'WithAside',
+          zh_CN: 'Wanavyosema',
+          en_US: 'Content reviews',
         },
         path: '/business/with-aside',
       },
       {
         code: 'withRadioCard',
         label: {
-          zh_CN: '带单选卡片',
-          en_US: 'With Nav Tabs',
+          zh_CN: 'Wafuatazi wangu',
+          en_US: 'My subscribers',
         },
         path: '/business/with-radio-cards',
       },
       {
         code: 'withTabs',
         label: {
-          zh_CN: '带选项卡',
-          en_US: 'With Tabs',
+          zh_CN: 'Tuma meseji',
+          en_US: 'Mass messaging',
         },
         path: '/business/with-tabs',
       },
     ],
+  },
+  
+
+  
+  {
+    code: 'permission',
+    label: {
+      zh_CN: 'Mipangilio',
+      en_US: 'Settings',
+    },
+    icon: 'permission',
+    path: '/permission',
+    children: [
+      {
+        code: 'routePermission',
+        label: {
+          zh_CN: 'Profaili yangu',
+          en_US: 'Profile settings',
+        },
+        path: '/permission/route',
+      },
+      {
+        code: 'notFound',
+        label: {
+          zh_CN: 'Zungumza nasi',
+          en_US: 'Contact us',
+        },
+        path: '/permission/404',
+      },
+    ],
+  },
+
+  {
+    code: 'guide',
+    label: {
+      zh_CN: 'Mwongozo',
+      en_US: 'Site Navigation',
+    },
+    icon: 'guide',
+    path: '/guide',
   },
 ];
 

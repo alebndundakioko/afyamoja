@@ -1,108 +1,55 @@
-import type { MySideOption } from '@/components/business/aside';
-import type { MyPageTableOptions } from '@/components/business/page';
-import type { MyRadioCardssOption } from '@/components/business/radio-cards';
-import type { BuniesssUser } from '@/interface/business';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
+import { Table, Button, message } from 'antd';
 
-import { Space, Tag } from 'antd';
+const dummySubscribers = Array.from({ length: 50 }, (_, index) => ({
+  key: (index + 1).toString(),
+  name: `Patient ${index + 1}`,
+  age: 20 + (index % 50),
+  medicalHistory: index % 2 === 0 ? 'Diabetes' : 'Hypertension',
+}));
 
-import { getBusinessUserList } from '@/api/business';
-import MyButton from '@/components/basic/button';
-import MyPage from '@/components/business/page';
+const SubscribersPage: FC = (): ReactElement => {
+  const handleContact = (name: string) => {
+    window.open(`mailto:c.kioko@alustudent.com?subject=Contact Request&body=Hello ${name},%0D%0A%0D%0A`);
+    message.info(`Contacting ${name}`);
+  };
 
-const { Item: SearchItem } = MyPage.MySearch;
+  const subscriberColumns = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+    },
+    {
+      title: 'Age',
+      dataIndex: 'age',
+      key: 'age',
+    },
+    {
+      title: 'Medical History',
+      dataIndex: 'medicalHistory',
+      key: 'medicalHistory',
+    },
+    {
+      title: 'Action',
+      key: 'action',
+      render: (_, { name }) => (
+        <Button type="primary" onClick={() => handleContact(name)}>Contact</Button>
+      ),
+    },
+  ];
 
-const asideOptions: MySideOption[] = [
-  {
-    title: 'Tab-1',
-    key: 1,
-  },
-  {
-    title: 'Tab-2',
-    key: 2,
-  },
-  {
-    title: 'Tab-3',
-    key: 3,
-  },
-];
-
-const radioCardsOptions: MyRadioCardssOption[] = [
-  {
-    label: 'Tab-1',
-    value: 1,
-  },
-  {
-    label: 'Tab-2',
-    value: 2,
-  },
-  {
-    label: 'Tab-3',
-    value: 3,
-  },
-];
-
-const tableColums: MyPageTableOptions<BuniesssUser> = [
-  {
-    title: 'Name',
-    children: [
-      { title: 'First Name', dataIndex: 'firstName', key: 'firstName' },
-      { title: 'Last Name', dataIndex: 'lastName', key: 'lastName' },
-    ],
-  },
-  { title: 'Age', dataIndex: 'age', key: 'age' },
-  { title: 'Address', dataIndex: 'address', key: 'address' },
-  {
-    title: 'Tags',
-    dataIndex: 'tags',
-    key: 'tags',
-    render: (tags, record) => (
-      <>
-        {record.tags.map(tag => (
-          <Tag color="blue" key={tag}>
-            {tag}
-          </Tag>
-        ))}
-      </>
-    ),
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    render: (_, record) => (
-      <Space size="middle">
-        <MyButton type="text">Invite {record.lastName}</MyButton>
-        <MyButton type="text">Delete</MyButton>
-      </Space>
-    ),
-  },
-];
-
-const BusinessWithRadioCardsPage: FC = () => {
   return (
-    <MyPage
-      pageApi={getBusinessUserList}
-      radioCardsData={radioCardsOptions}
-      asideData={asideOptions}
-      asideKey="key"
-      searchRender={
-        <>
-          <SearchItem label="FirstName" name="firstName" type="input" />
-          <SearchItem label="FirstName" name="firstName1" type="input" />
-          <SearchItem label="FirstName" name="firstName2" type="input" />
-          <SearchItem label="FirstName" name="firstName3" type="input" />
-          <SearchItem label="FirstName" name="firstName4" type="input" />
-          <SearchItem label="FirstName" name="firstName5" type="input" />
-          <SearchItem label="FirstName" name="firstName6" type="input" />
-          <SearchItem label="FirstName" name="firstName7" type="input" />
-          <SearchItem label="FirstName" name="firstName8" type="input" />
-          <SearchItem label="FirstName" name="firstName9" type="input" />
-          <SearchItem label="FirstName" name="firstName10" type="input" />
-        </>
-      }
-      tableOptions={tableColums}
-    ></MyPage>
+    <div style={{ padding: '24px', background: '#fff' }}>
+      <h2>Subscribers and Readers</h2>
+      <Table
+        columns={subscriberColumns}
+        dataSource={dummySubscribers}
+        pagination={{ pageSize: 10 }} // Adjusting pageSize for pagination
+        style={{ marginTop: '16px' }}
+      />
+    </div>
   );
 };
 
-export default BusinessWithRadioCardsPage;
+export default SubscribersPage;

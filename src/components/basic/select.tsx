@@ -2,7 +2,7 @@ import type { FC } from 'react';
 
 import { Select } from 'antd';
 
-// import { SelectProps, SelectValue } from 'antd/es/select';
+// Custom select component
 // const MySelect = <T extends SelectValue = SelectValue>({ children, ...props }: SelectProps<T>) => {
 //   return <Select<T> {...props}>{children}</Select>;
 // };

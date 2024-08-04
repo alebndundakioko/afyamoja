@@ -2,5 +2,5 @@ import type { GetRoleResult } from '@/interface/permission/role.interface';
 
 import { request } from '../request';
 
-/** get role list api */
+/** API to get the role list */
 export const apiGetRoleList = () => request<GetRoleResult>('get', '/permission/role');

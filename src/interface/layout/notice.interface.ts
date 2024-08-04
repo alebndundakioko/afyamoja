@@ -40,10 +40,3 @@ export type Notice<T extends Notices['type'] | 'all' = 'all'> = T extends 'all'
   ? Notices
   : Extract<Notices, { type: T }>;
 
-// type MinusKeys<T, U> = Pick<T, Exclude<keyof T, keyof U>>
-
-// type Defined<T> = T extends undefined ? never : T
-
-// type MergedProperties<T, U> = { [K in keyof T & keyof U]: undefined extends T[K] ? Defined<T[K] | U[K]> : T[K] }
-
-// type Merge<T extends Object, U extends Object> = MinusKeys<T, U> & MinusKeys<U, T> & MergedProperties<U, T>

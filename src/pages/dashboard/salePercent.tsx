@@ -26,27 +26,27 @@ interface Data {
 
 const data: Data = {
   all: [
-    { name: { zh_CN: '家用电器', en_US: 'appliances' }, value: 4544 },
-    { name: { zh_CN: '食用酒水', en_US: 'drinks' }, value: 3321 },
-    { name: { zh_CN: '个护健康', en_US: 'health' }, value: 3113 },
-    { name: { zh_CN: '服饰箱包', en_US: 'clothing' }, value: 2341 },
-    { name: { zh_CN: '母婴产品', en_US: 'baby' }, value: 1231 },
-    { name: { zh_CN: '其他', en_US: 'others' }, value: 132 },
+    { name: { zh_CN: 'Malaria', en_US: 'Malaria' }, value: 4544 },
+    { name: { zh_CN: 'TB', en_US: 'TB' }, value: 3321 },
+    { name: { zh_CN: 'Cholera', en_US: 'Cholera' }, value: 3113 },
+    { name: { zh_CN: 'Typhoid', en_US: 'Typhoid' }, value: 2341 },
+    { name: { zh_CN: 'Dysentry', en_US: 'Dysentry' }, value: 1231 },
+    { name: { zh_CN: 'Diarrhea', en_US: 'Diarrhea' }, value: 132 },
   ],
   online: [
-    { name: { zh_CN: '家用电器', en_US: 'appliances' }, value: 244 },
-    { name: { zh_CN: '食用酒水', en_US: 'drinks' }, value: 231 },
-    { name: { zh_CN: '个护健康', en_US: 'health' }, value: 311 },
-    { name: { zh_CN: '服饰箱包', en_US: 'clothing' }, value: 41 },
-    { name: { zh_CN: '母婴产品', en_US: 'baby' }, value: 121 },
-    { name: { zh_CN: '其他', en_US: 'others' }, value: 111 },
+    { name: { zh_CN: 'Cholera', en_US: 'Cholera' }, value: 244 },
+    { name: { zh_CN: 'Common cold', en_US: 'Common cold' }, value: 231 },
+    { name: { zh_CN: 'Vomiting', en_US: 'Vomiting' }, value: 311 },
+    { name: { zh_CN: 'Body ache', en_US: 'Body ache' }, value: 41 },
+    { name: { zh_CN: 'Diarrhea', en_US: 'Diarrhea' }, value: 121 },
+    { name: { zh_CN: 'Minor illnesses', en_US: 'Minor illnesses' }, value: 111 },
   ],
   offline: [
-    { name: { zh_CN: '家用电器', en_US: 'appliances' }, value: 99 },
-    { name: { zh_CN: '食用酒水', en_US: 'drinks' }, value: 188 },
-    { name: { zh_CN: '个护健康', en_US: 'health' }, value: 344 },
-    { name: { zh_CN: '服饰箱包', en_US: 'clothing' }, value: 255 },
-    { name: { zh_CN: '其他', en_US: 'others' }, value: 65 },
+    { name: { zh_CN: 'Diabetes', en_US: 'Diabetes' }, value: 99 },
+    { name: { zh_CN: 'Cancer', en_US: 'Cancer' }, value: 188 },
+    { name: { zh_CN: 'HIV', en_US: 'HIV' }, value: 344 },
+    { name: { zh_CN: 'Blood Pressure', en_US: 'Blood Pressure' }, value: 255 },
+    { name: { zh_CN: 'Diabetes', en_US: 'Diabetes' }, value: 65 },
   ],
 };
 
@@ -79,6 +79,7 @@ const SalePercent: FC<{ loading: boolean }> = ({ loading }) => {
         </Radio.Group>
       }
     >
+      
       <Row gutter={20}>
         <Col {...wrapperCol}>
           <ResponsiveContainer height={250}>
@@ -126,13 +127,14 @@ const SalePercent: FC<{ loading: boolean }> = ({ loading }) => {
               return (
                 <List.Item>
                   <Badge color={COLORS[index]} />
-                  <span>{item.name[locale]}</span> | <span>{item.value}</span> <span>¥ {percent}</span>
+                  <span>{item.name[locale]}</span> | <span>{item.value}</span> <span>Average {percent}</span>
                 </List.Item>
               );
             }}
           />
         </Col>
       </Row>
+
     </Card>
   );
 };

@@ -1,8 +1,8 @@
 export const zhCN_component = {
-  'component.search.request': '查询',
-  'component.search.reset': '重置',
-  'component.search.name': '姓名',
-  'component.search.sex': '性别',
-  'component.search.male': '男',
-  'component.search.female': '女',
+  'component.search.request': 'Tafuta',
+  'component.search.reset': 'Rudisha',
+  'component.search.name': 'Jina',
+  'component.search.sex': 'Jinsia',
+  'component.search.male': 'Mwanaume',
+  'component.search.female': 'Mwanamke',
 };
