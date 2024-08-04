@@ -18,7 +18,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "comment": "Initiate commit with a small change" // Added comment
   },
   "include": ["./src", "vite.config.ts"]
 }
