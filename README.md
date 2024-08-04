@@ -18,4 +18,5 @@ $ npm run build
 $ yarn install
 $ yarn start
 
-![Alt text](URL)
+![Alt text] https://github.com/alebndundakioko/afyamoja/blob/master/caknsC.PNG
+
